@@ -3,11 +3,11 @@ const handlebars = require('express-handlebars');
 const path = require('path');
 const PORT = 5500;
 
+const routes = require('./routes');
+
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Runing...');
-});
+app.use(routes);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
