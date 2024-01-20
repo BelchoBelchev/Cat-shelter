@@ -1,2 +1,2 @@
 # Cat-shelter
-cat-shelter @Softuni
+Cat-shelter @Softuni
