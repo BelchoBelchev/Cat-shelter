@@ -11,3 +11,8 @@ const cats = [
 exports.getAll = () => {
     return cats.slice();
 };
+
+exports.create = (catData) => {
+    catData._id = cats[cats.length - 1]._id + 1;
+    cats.push(catData);
+};
