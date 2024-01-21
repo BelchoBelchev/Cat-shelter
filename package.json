@@ -1,7 +1,7 @@
 {
   "name": "cat-shelter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cat-shelter @Softuni",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js"
