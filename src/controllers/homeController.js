@@ -1,7 +1,10 @@
 const router = require('express').Router();
 
+const catsService = require('../services/catService');
+
 router.get('/', (req, res) => {
-    res.render('home');
+    const cats = catsService.getAll(catsService);
+    res.render('home', { cats });
 });
 
 module.exports = router;
