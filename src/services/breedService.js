@@ -10,3 +10,7 @@ const breeds = [
 exports.getAll = () => {
     return breeds.slice();
 };
+
+exports.create = (breed) => {
+    breeds.push(breed);
+};
