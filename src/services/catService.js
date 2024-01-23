@@ -12,6 +12,10 @@ exports.getAll = () => {
     return cats.slice();
 };
 
+exports.getOne = (id) => {
+    return cats.find(cat => cat._id == id);
+};
+
 exports.create = (catData) => {
     catData._id = cats[cats.length - 1]._id + 1;
     cats.push(catData);
