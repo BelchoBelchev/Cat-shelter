@@ -8,9 +8,7 @@
     <input type="text" id="image" value="{{cat.imageUrl}}">
     <label for="group">Breed</label>
     <select id="group">
-        {{#each breeds}}
-        <option>{{breed}}</option>
-        {{/each}}
+        {{#each breeds}}<option>{{breed}}</option>{{/each}}
     </select>
     <button>Edit Cat</button>
 </form>
