@@ -4,12 +4,12 @@ const homeController = require('./controllers/homeController');
 const addCatController = require('./controllers/addCatCotroller');
 const addBreedContoller = require('./controllers/addBreedController');
 const editController = require('./controllers/editController');
-const shelterTheCat = require('./controllers/shelterTheCat');
+const shelterTheCatController = require('./controllers/shelterTheCatController');
 
 router.use(homeController);
 router.use(addCatController);
 router.use(addBreedContoller);
 router.use(editController);
-router.use(shelterTheCat);
+router.use(shelterTheCatController);
 
 module.exports = router;
