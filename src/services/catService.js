@@ -20,3 +20,9 @@ exports.create = (catData) => {
     catData._id = cats[cats.length - 1]._id + 1;
     cats.push(catData);
 };
+
+exports.update = (id, editedCat) => {
+    const cat = cats.find(cat => cat._id == id);
+    const index = cats.indexOf(cat);
+    return cats.splice(index, 1, editedCat);
+};

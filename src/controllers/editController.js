@@ -13,7 +13,17 @@ router.get('/edit/:id', (req, res) => {
 });
 
 router.post('/edit/:id', (req, res) => {
+    const id = req.params.id;
+    const editedCat = {
+        _id: id,
+        name: req.body.name,
+        imageUrl: req.body.imageUrl,
+        description: req.body.description,
+        breed: req.body.breed
+    }
     
+    catsService.update(id, editedCat);
+    res.redirect('/');
 });
 
 module.exports = router;
