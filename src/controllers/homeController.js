@@ -7,4 +7,11 @@ router.get('/', (req, res) => {
     res.render('home', { cats });
 });
 
+router.post('/search', (req, res) => {
+    const search = req.body.search;
+    const cats = catsService.search(search);
+    console.log(search);
+    res.render('home', { cats });
+});
+
 module.exports = router;

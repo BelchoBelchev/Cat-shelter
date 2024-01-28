@@ -32,3 +32,13 @@ exports.del = (id) => {
     const index = cats.indexOf(cat);
     return cats.splice(index, 1);
 };
+
+exports.search = (search) => {
+    let result = cats.slice();
+
+    if (search) {
+        result = result.filter(cat => cat.breed.toLocaleLowerCase() === search.toLocaleLowerCase());
+    }
+
+    return result;
+};
