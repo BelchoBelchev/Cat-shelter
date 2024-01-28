@@ -12,4 +12,8 @@ router.get('/edit/:id', (req, res) => {
     res.render('editCat', { cat, breeds });
 });
 
+router.post('/edit/:id', (req, res) => {
+    
+});
+
 module.exports = router;
