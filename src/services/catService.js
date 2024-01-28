@@ -26,3 +26,9 @@ exports.update = (id, editedCat) => {
     const index = cats.indexOf(cat);
     return cats.splice(index, 1, editedCat);
 };
+
+exports.del = (id) => {
+    const cat = cats.find(cat => cat._id == id);
+    const index = cats.indexOf(cat);
+    return cats.splice(index, 1);
+};
